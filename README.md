@@ -10,10 +10,12 @@ steps
 	- [ ] what is origin server [article](https://www.imperva.com/learn/performance/origin-server/)
 	- [ ] what is Browser Cache [article](https://www.imperva.com/learn/performance/browser-caching/)
 	- [x] search what does CDN(content delivery content) means
+- [ ] setup aws cli in circleCI [ci/cd]
+- [ ] setup eb cli in circleCI [ci/cd]
 - [ ] finish all frontend process first
-	- [ ] create s3 bucket
-	- [ ] enable static hosting 
-	- [ ] install frontend dependencies [ci/cd]
+	- [x] create s3 bucket
+	- [x] enable static hosting 
+	- [x] install frontend dependencies [ci/cd]
 	- [ ] build frontend [ci/cd]
 	- [ ] deploy fronted if build witout errors [ci/cd]
 - [ ] create database RDS

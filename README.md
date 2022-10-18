@@ -11,10 +11,14 @@ steps
 	- [ ] what is Browser Cache [article](https://www.imperva.com/learn/performance/browser-caching/)
 	- [x] search what does CDN(content delivery content) means
 - [ ] finish all frontend process first
-	- [ ] create s3 bucket 
+	- [ ] create s3 bucket
+	- [ ] enable static hosting 
 	- [ ] install frontend dependencies [ci/cd]
 	- [ ] build frontend [ci/cd]
 	- [ ] deploy fronted if build witout errors [ci/cd]
+- [ ] create database RDS
+	- [ ] give public access
+	- [ ] database env variables in circleCI [ci/cd]
 
 ---
 

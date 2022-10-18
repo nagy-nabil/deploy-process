@@ -74,10 +74,6 @@ jobs:
           command: |
             echo "# TODO: Install, build, deploy in both apps"
       - run:
-          name: build front-end
-          command: |
-            npm run frontend:build
-      - run:
           name: deploy front-end
           command: |
             npm run frontend:deploy

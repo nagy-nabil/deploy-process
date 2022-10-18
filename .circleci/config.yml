@@ -16,7 +16,7 @@ jobs:
       - node/install:
           node-version: '14.15'         
       - browser-tools/install-chrome
-      - browser-tools/install-chromedriver
+      # - browser-tools/install-chromedriver
       - checkout
       # Use root level package.json to install dependencies in the frontend app
       - run:
@@ -32,7 +32,6 @@ jobs:
       #     name: Install API Dependencies
       #     command: |
       #      echo "TODO: Install dependencies in the the backend API  "
-      # TODO: Lint the frontend
       - run:
           name: Front-End Lint
           command: |
@@ -43,11 +42,15 @@ jobs:
           command: |
             echo "testing front-end"
             npm run frontend:test
-      # TODO: Build the frontend app
+      - run:
+          name: e2e testing
+          command: |
+            npm run frontend:e2e
       - run:
           name: Front-End Build
           command: |
-            echo "TODO: Build the frontend app"
+            echo "Build the frontend app"
+            npm run frontend:build
       # # TODO: Build the backend API      
       # - run:
       #     name: API Build

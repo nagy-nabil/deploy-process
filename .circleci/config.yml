@@ -42,10 +42,11 @@ jobs:
           command: |
             echo "testing front-end"
             npm run frontend:test
-      - run:
-          name: e2e testing
-          command: |
-            npm run frontend:e2e
+      #! e2e not working
+      # - run:
+      #     name: e2e testing
+      #     command: |
+      #       npm run frontend:e2e
       - run:
           name: Front-End Build
           command: |

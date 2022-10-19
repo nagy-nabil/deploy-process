@@ -1,5 +1,7 @@
 # [Hosting a Full-Stack Application](http://angularudagramui.s3-website-us-east-1.amazonaws.com/home)
 
+[![nagy-nabil](https://circleci.com/gh/nagy-nabil/deploy-process.svg?style=svg)](https://app.circleci.com/pipelines/github/nagy-nabil/deploy-process)
+
 ## ***[App Link](http://angularudagramui.s3-website-us-east-1.amazonaws.com/home)*** 
 
 i was free to choose deploy this starter app or deploy my own but i choose this one to challenge myself understanding codde i didin't write myself and how to dignose it to choose what cloud services it need.
@@ -41,7 +43,7 @@ using **CircleCI** to automate deploying process, check out the configuration [.
 ![build pipe](./assets/envvar.png)
 
 ## Set Env Run Book
-
+- to add environment variable to **elastic beanstalk** `cd udagram/udagram-api` then use `eb setenv key=value key2=value` of course you must do this after creating the environment
 ### Installation
 
 Provision the necessary AWS services needed for running the application:

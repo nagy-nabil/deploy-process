@@ -1,65 +1,53 @@
-# Hosting a Full-Stack Application
+# [Hosting a Full-Stack Application](http://angularudagramui.s3-website-us-east-1.amazonaws.com/home)
 
-### **You can use you own project completed in previous courses or use the provided Udagram app for completing this final project.**
+## ***[App Link](http://angularudagramui.s3-website-us-east-1.amazonaws.com/home)*** 
 
-steps
-- [x] used eb setenv value=key to update env variales for udagram eb app
-- [x] run frontend locally
-- [x] run backend locally
-- [x] connect to database locally
-- [x] check cache control [article](https://www.imperva.com/learn/performance/cache-control/)
-	- [ ] what is origin server [article](https://www.imperva.com/learn/performance/origin-server/)
-	- [ ] what is Browser Cache [article](https://www.imperva.com/learn/performance/browser-caching/)
-	- [x] search what does CDN(content delivery content) means
-- [ ] setup aws cli in circleCI [ci/cd]
-- [ ] setup eb cli in circleCI [ci/cd]
-- [ ] finish all frontend process first
-	- [x] create s3 bucket
-	- [x] enable static hosting 
-	- [x] install frontend dependencies [ci/cd]
-	- [ ] build frontend [ci/cd]
-	- [ ] deploy fronted if build witout errors [ci/cd]
-- [ ] create database RDS
-	- [ ] give public access
-	- [ ] database env variables in circleCI [ci/cd]
+i was free to choose deploy this starter app or deploy my own but i choose this one to challenge myself understanding codde i didin't write myself and how to dignose it to choose what cloud services it need.
 
----
+## cloud infrastructure
+![cloud infrastructure](./assets/cloud_infrastructure.png)
 
-In this project you will learn how to take a newly developed Full-Stack application built for a retailer and deploy it to a cloud service provider so that it is available to customers. You will use the aws console to start and configure the services the application needs such as a database to store product information and a web server allowing the site to be discovered by potential customers. You will modify your package.json scripts and replace hard coded secrets with environment variables in your code.
+**screenshot for RDS**
 
-After the initial setup, you will learn to interact with the services you started on aws and will deploy manually the application a first time to it. As you get more familiar with the services and interact with them through a CLI, you will gradually understand all the moving parts.
+![RDS](./assets/RDS.png)
+**screenshot for Elastic Beanstalk**
 
-You will then register for a free account on CircleCi and connect your Github account to it. Based on the manual steps used to deploy the app, you will write a config.yml file that will make the process reproducible in CircleCi. You will set up the process to be executed automatically based when code is pushed on the main Github branch.
+![RDS](./assets/elasticbeanstalk.png)
 
-The project will also include writing documentation and runbooks covering the operations of the deployment process. Those runbooks will serve as a way to communicate with future developers and anybody involved in diagnosing outages of the Full-Stack application.
+**screenshot for S3 Bucket for static hosting**
 
-# Udagram
+![RDS](/assets/s3Healty.png)
 
-This application is provided to you as an alternative starter project if you do not wish to host your own code done in the previous courses of this nanodegree. The udagram application is a fairly simple application that includes all the major components of a Full-Stack web application.
+**screenshot for S3 Bucket for api media**
 
+![RDS](/assets/mediaBucket.png)
 
+## CI/CD
+using **CircleCI** to automate deploying process, check out the configuration [.circleci/config.yml](./.circleci/config.yml)
 
-### Dependencies
+**pipeline overview**
+![pipe](/assets/pipeline.png)
 
-```
-- Node v14.15.1 (LTS) or more recent. While older versions can work it is advisable to keep node to latest LTS version
+**screenshot for Build pipeline**
+![build pipe](./assets/build_pipe.png)
 
-- npm 6.14.8 (LTS) or more recent, Yarn can work but was not tested for this project
+**screenshot for manual deploy approval**
+![build pipe](./assets/manual_approval.png)
 
-- AWS CLI v2, v1 can work but was not tested for this project
+**screenshot for Deploy pipeline**
+![build pipe](./assets/deploy_pipe.png)
 
-- A RDS database running Postgres.
+**screenshot for Environment variables in circleci**
+![build pipe](./assets/envvar.png)
 
-- A S3 bucket for hosting uploaded pictures.
-
-```
+## Set Env Run Book
 
 ### Installation
 
 Provision the necessary AWS services needed for running the application:
 
-1. In AWS, provision a publicly available RDS database running Postgres. <Place holder for link to classroom article>
-1. In AWS, provision a s3 bucket for hosting the uploaded files. <Place holder for tlink to classroom article>
+1. In AWS, provision a publicly available RDS database running Postgres. 
+1. In AWS, provision a s3 bucket for hosting the uploaded files. 
 1. Export the ENV variables needed or use a package like [dotnev](https://www.npmjs.com/package/dotenv)/.
 1. From the root of the repo, navigate udagram-api folder `cd starter/udagram-api` to install the node_modules `npm install`. After installation is done start the api in dev mode with `npm run dev`.
 1. Without closing the terminal in step 1, navigate to the udagram-frontend `cd starter/udagram-frontend` to intall the node_modules `npm install`. After installation is done start the api in dev mode with `npm run start`.

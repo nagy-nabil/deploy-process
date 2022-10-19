@@ -7,7 +7,7 @@ orbs:
   aws-cli: circleci/aws-cli@3.1.3
   # different jobs are calles later in the workflows sections
 jobs:
-  build:
+  test-build:
     docker:
       # the base image can run most needed actions with orbs
       - image: "cimg/node:14.15-browsers"
@@ -42,11 +42,6 @@ jobs:
           command: |
             echo "testing front-end"
             npm run frontend:test
-      #! e2e not working
-      # - run:
-      #     name: e2e testing
-      #     command: |
-      #       npm run frontend:e2e
       - run:
           name: Front-End Build
           command: |
@@ -78,7 +73,7 @@ jobs:
 workflows:
   udagram:
     jobs:
-      - build
+      - test-build
       - hold:
           filters:
             branches:
@@ -86,7 +81,7 @@ workflows:
                 - main
           type: approval
           requires:
-            - build
+            - test-build
       - deploy:
           requires:
             - hold

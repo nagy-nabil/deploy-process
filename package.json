@@ -12,5 +12,8 @@
         "api:start": "cd udagram/udagram-api && npm run dev",
         "api:deploy": "cd udagram/udagram-api && npm run deploy",
         "deploy": "npm run api:deploy && npm run frontend:deploy"
+    },
+    "devDependencies": {
+        "@types/sequelize": "^4.28.14"
     }
 }

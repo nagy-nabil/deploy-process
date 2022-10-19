@@ -3,6 +3,7 @@
 ### **You can use you own project completed in previous courses or use the provided Udagram app for completing this final project.**
 
 steps
+- [x] used eb setenv value=key to update env variales for udagram eb app
 - [x] run frontend locally
 - [x] run backend locally
 - [x] connect to database locally

@@ -2,7 +2,7 @@
 
 [![nagy-nabil](https://circleci.com/gh/nagy-nabil/deploy-process.svg?style=svg)](https://app.circleci.com/pipelines/github/nagy-nabil/deploy-process)
 
-## ***[App Link](http://angularudagramui.s3-website-us-east-1.amazonaws.com/home)*** 
+## ***[App Link](http://angularudagramui.s3-website-us-east-1.amazonaws.com)*** 
 
 i was free to choose deploy this starter app or deploy my own but i choose this one to challenge myself understanding codde i didin't write myself and how to dignose it to choose what cloud services it need.
 

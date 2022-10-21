@@ -1,6 +1,6 @@
 # [Hosting a Full-Stack Application](http://angularudagramui.s3-website-us-east-1.amazonaws.com/home)
 
-[![nagy-nabil](https://circleci.com/gh/nagy-nabil/deploy-process.svg?style=svg)](https://app.circleci.com/pipelines/github/nagy-nabil/deploy-process)
+[![nagy-nabil](https://circleci.com/gh/nagy-nabil/deployment-process.svg?style=svg)](https://app.circleci.com/pipelines/github/nagy-nabil/deployment-process)
 
 ## ***[App Link](http://angularudagramui.s3-website-us-east-1.amazonaws.com)*** 
 
